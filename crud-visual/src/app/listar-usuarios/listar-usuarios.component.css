@@ -1,0 +1,44 @@
+#tabla{ 
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 1em; 
+    font-family: sans-serif; 
+    min-width: 450px; 
+    box-shadow: 0 0 20px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tabla thead tr { 
+    background-color: #980081; 
+    color: #ffffff; 
+    text-align: middle;
+}
+#tabla th, #tabla td { 
+    padding: 12px 15px;
+}
+#tabla tbody tr { 
+    border-bottom: 1px solid #dddddd; 
+} 
+#body{
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url('../img/foto.jpg');
+    background-size: cover;
+}
+.boton {
+    padding: 10px 20px;
+    background-color: #980081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .boton:hover {
+    background-color: #45a049;
+  }
+  
+  .boton:active {
+    background-color: #3e8e41;
+  }

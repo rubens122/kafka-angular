@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <form id="actualizar" (ngSubmit)="actualizarUsuario()">
+        <h2>Actualizar Usuario</h2>
+        <label for="id">ID:</label>
+        <input type="text" id="id" [(ngModel)]="usuario.id" name="id" readonly>
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+        <br>
+        <button type="submit">Actualizar</button>
+        <button type="button" (click)="irAListarUsuarios()">Volver</button>
+    </form>
+</html>

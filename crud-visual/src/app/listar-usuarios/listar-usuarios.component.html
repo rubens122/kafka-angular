@@ -1,0 +1,31 @@
+<html>
+  <head>
+  </head>
+  <body id="body">
+    <h1>USUARIOS</h1>
+    <table border="" id="tabla">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>
+            <button class="boton" (click)="borrarUsuario(usuario.id)">Borrar</button>
+          </td>
+          <td>
+            <button class="boton" (click)="irAActualizarUsuario(usuario.id)">Actualizar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="boton" (click)="irAInsertarUsuario()">Insertar</button>
+    <button class="boton" (click)="listarUltimosUsuarios()">Ultimos Usuarios</button>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+  <body id="body">
+    <h1>ULTIMOS USUARIOS AÑADIDOS</h1>
+    <table border="" id="tabla">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.nombre}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" (click)="irAListarUsuarios()">Volver</button>
+  </body>
+</html>

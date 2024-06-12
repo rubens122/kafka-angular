@@ -1,0 +1,41 @@
+
+  #insertar{
+    width: 50%;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 1em; 
+    font-family: sans-serif; 
+    background-image: url('../img/foto.jpg');
+    background-size: cover;
+  }
+  
+  #insertar label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #insertar input {
+    width: 20%;
+    height: 20%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #insertar button {
+    background-color: #980081;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  #insertar button :hover {
+    background-color: #3e8e41;
+  }
+  
+  
