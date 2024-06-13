@@ -25,7 +25,7 @@ public class Consumidor {
         usuarios.add(usuario);
         usuarioRepo.save(usuario);
     }
-
+   
     public List<Usuario> cogerUsuariosCola() {
         return usuarios;
     }

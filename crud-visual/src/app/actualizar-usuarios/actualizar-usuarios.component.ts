@@ -11,6 +11,7 @@ import { Usuario } from '../usuario.model';
 export class ActualizarUsuarioComponent implements OnInit {
 
   usuario: Usuario = { id: 0, nombre: '' };
+  private formatoNombre = /^[a-zA-Z ]+$/
 
   constructor(private route: ActivatedRoute, private usuarioService: UsuarioService, private router: Router) { }
 
@@ -24,6 +25,10 @@ export class ActualizarUsuarioComponent implements OnInit {
   }
 
   actualizarUsuario(): void {
+    if (!this.usuario.nombre || !this.usuario.nombre.match(this.formatoNombre)) {
+      alert('Error: El nombre debe de tener al menos un carácter y no contener números ni caracteres especiales');
+      return;
+    }
     this.usuarioService.actualizarUsuario(this.usuario.id, this.usuario).subscribe(response => {
       console.log(response);
     });
@@ -32,4 +37,3 @@ export class ActualizarUsuarioComponent implements OnInit {
     this.router.navigate(['/listar-usuarios']);
   }
 }
-
