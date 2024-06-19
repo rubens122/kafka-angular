@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ListarUsuariosComponent } from './listar-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioService } from '../usuario.service'
 
 describe('ListarUsuariosComponent', () => {
   let component: ListarUsuariosComponent;
@@ -8,7 +9,9 @@ describe('ListarUsuariosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListarUsuariosComponent]
+      imports: [HttpClientModule],
+      declarations: [ListarUsuariosComponent],
+      providers: [UsuarioService]
     })
     .compileComponents();
 
@@ -21,3 +24,4 @@ describe('ListarUsuariosComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

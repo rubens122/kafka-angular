@@ -1,18 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActualizarUsuariosComponent } from './actualizar-usuarios.component';
+import { ActualizarUsuarioComponent } from './actualizar-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
-describe('ActualizarUsuariosComponent', () => {
-  let component: ActualizarUsuariosComponent;
-  let fixture: ComponentFixture<ActualizarUsuariosComponent>;
+describe('ActualizarUsuariocomponent', () => {
+  let component: ActualizarUsuarioComponent;
+  let fixture: ComponentFixture<ActualizarUsuarioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ActualizarUsuariosComponent]
+      imports: [HttpClientModule],
+      declarations: [ActualizarUsuarioComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ActualizarUsuariosComponent);
+    fixture = TestBed.createComponent(ActualizarUsuarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
