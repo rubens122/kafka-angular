@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.*;
 public class Productor {
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, String> plantilla;
 
     private static final String TOPIC = "usuarios";
 
     @PostMapping
     public String subirUsuario(@RequestParam("id") int id, @RequestParam("nombre") String nombre) {
         String mensaje =  id + "," + nombre;
-        kafkaTemplate.send(TOPIC, mensaje);
+        plantilla.send(TOPIC, mensaje);
         return "Publicado correctamente";
     }
 }

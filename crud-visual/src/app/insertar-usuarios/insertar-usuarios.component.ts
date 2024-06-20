@@ -17,7 +17,7 @@ export class InsertarUsuarioComponent {
 
   crearUsuario(): void {
     if (this.usuario.id <= 0) {
-      alert('Error: El DNI debe ser mayor que 0');
+      alert('Error: El ID debe ser mayor que 0');
       return;
     }
     if (!this.usuario.nombre || !this.usuario.nombre.match(this.formatoNombre)) {
