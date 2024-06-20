@@ -20,6 +20,11 @@ public class UsuarioControlador {
         return usuarioRepo.findAll();
     }
     
+    @CrossOrigin(origins = "*")
+    @GetMapping("/{id}")
+    public Optional<Usuario> listarUsuarioId(@PathVariable int id) {
+        return this.usuarioRepo.findById(id);
+    }
     
     @CrossOrigin(origins = "*")
     @PostMapping(path="/insertar")
